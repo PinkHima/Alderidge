@@ -25,20 +25,21 @@ body {
 --lo-back2: #252625CC;
 --shadow: #666;
 --outline: #fff;
---accent1: #CCE2E6; 
---accent2: #8591C7;
---accent3: #5B87BE;
+--AOSky: #CCE2E6; 
+--AOFog: #81989C;
+--AODepth: #6D8285;
+--AOJet: #2E312F;
 
 }
 
 
 /* MAIN BODY SCROLL BARS */
-html { overflow-y: scroll; scrollbar-color: #8591C7 #fff; scrollbar-width: thin;}
+html { overflow-y: scroll; scrollbar-color: #81989C #2E312F; scrollbar-width: thin;}
 
 
 body::-webkit-scrollbar{width:8px}
-body::-webkit-scrollbar-track{background: var(--outline);}
-body::-webkit-scrollbar-thumb{background:var(--accent2); }
+body::-webkit-scrollbar-track{background: var(--AOJet);}
+body::-webkit-scrollbar-thumb{background:var(--AOFog); }
 
 /* CUSTOM TOOL TIPS */
 #s-m-t-tooltip{
@@ -49,16 +50,12 @@ body::-webkit-scrollbar-thumb{background:var(--accent2); }
 /* style and design */
     padding:8px;
     background:var(--lo-back2); /* fallback if rgba not supported */
-    -moz-border-radius:10px;
-    -webkit-border-radius:10px;
-    border-radius:10px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Special Elite', cursive;
     font-size:12px;
     line-height:16px;
-    color:var(--accent2);
+    color:var(--AOFog);
     text-transform: uppercase;
     font-weight: 700;
-    border:3px solid white;
 }
 
 
@@ -195,7 +192,7 @@ https://pinkhima.github.io/Alderidge/home
 
 .SwabluScroll::-webkit-scrollbar{width:8px}
 .SwabluScroll::-webkit-scrollbar-track{background: var(--outline);}
-.SwabluScroll::-webkit-scrollbar-thumb{background:var(--accent2); }
+.SwabluScroll::-webkit-scrollbar-thumb{background:var(--AOFog); }
 
 .ContactBox{
     width:250px;
@@ -293,7 +290,7 @@ https://pinkhima.github.io/Alderidge/home
 }
 
 .linkyevent a{
-    color: var(--accent1);
+    color: var(--AOSky);
     text-decoration:none;
     font-size: 25px; 
     font-family:'dosis', sans serif; 
@@ -325,7 +322,7 @@ https://pinkhima.github.io/Alderidge/home
         
     .HimaPatchScroll::-webkit-scrollbar{width:8px}
     .HimaPatchScroll::-webkit-scrollbar-track{background: var(--outline);}
-    .HimaPatchScroll::-webkit-scrollbar-thumb{background:var(--accent2); }
+    .HimaPatchScroll::-webkit-scrollbar-thumb{background:var(--AOFog); }
 
 .HimaPatchScroll hima::before{
     content: "\ec85";
@@ -460,6 +457,7 @@ https://pinkhima.github.io/Alderidge/home
     position:fixed;
     right: 5px;
     top:5px;
+    z-index:999999;
 }
   
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
@@ -470,14 +468,12 @@ https://pinkhima.github.io/Alderidge/home
     display: none;
     overflow: hidden;
     background-color: var(--lo-back);
-    width: 50vw;
-    max-width:300px;
+    width:100%;
+    height: 8vh;
     position:fixed;
     left:0px;
     top:0px;
-    z-index:999999;
-    min-height:200px;
-    border-radius: 0 0 15px 0;
+    z-index:999998;
 }
 
 .fa-bars {
@@ -495,35 +491,37 @@ https://pinkhima.github.io/Alderidge/home
     -webkit-text-stroke: 5px transparent;
 }
 
-.AlderidgeMenuButtons {padding: 0 5px;}
+.AlderidgeMenuButtons {display: flex; flex-direction:row; justify-content: space-evenly; width:100%; height:8vh;}
 
-.AlderidgeMenuButtons i{
-    width:70px;
-    height:75px;
-    font-size: 50px;
-    padding-right:5px;
-    color:var(--back1);
-    background: #D5EAEB;
-    background: -moz-linear-gradient(90deg, rgba(213, 234, 235,1) 0%, rgba(129, 152, 156,1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(213, 234, 235,1) 0%, rgba(129, 152, 156,1) 100%);
-    background: linear-gradient(90deg, rgba(213, 234, 235,1) 0%, rgba(129, 152, 156,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#D5EAEB",endColorstr="#81989C",GradientType=1);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-stroke: 5px transparent;
-}
 
-.AlderidgeMenuButtons span, .AlderidgeMenuButtons i{display: flex; justify-content:space-between; align-items:center;}
-
-.AlderidgeMenuButtons i{justify-content:end;}
 
 .AlderidgeMenuContent a:link, .AlderidgeMenuContent a:visited, .AlderidgeMenuContent a:link {
-color: var(--back1); text-decoration:none;}
+    color: var(--AOJet); text-decoration:none;}
 
-.AlderidgeMenuButtons b{font-size:35px; font-family: 'Special Elite', cursive;}
 
-.AlderidgeMenuButtons:hover{background-color: var(--lo-back);}
 
+
+.AOMenuButtonPod {
+    border:0px solid red;
+    min-width:100px;
+    height: calc(100% - 15px); 
+    padding:5px;
+}
+
+.AOMenuButtonPod:hover {background-color: var(--lo-back); height:100%;}
+
+.AOMenuButtonPod .fas, .AOMenuButtonPod .fa-solid, .cp-book{
+    font-size: 35px;
+    text-align: center;
+    color: var(--AOJet) !important;
+    padding:2px 2px 10px 2px;
+}
+
+.AOMenuButtonPod span{
+    color: var(--AOJet);
+    font-size: 20px;
+    font-family: 'Special Elite', cursive;
+}
 
 /*=============================================== *
 RESPONSIVE SECTION - A 「Pink ❀ Himalayan」PROJECT
