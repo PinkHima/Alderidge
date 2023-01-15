@@ -139,6 +139,26 @@ https://pinkhima.github.io/Alderidge/home
     /*box-shadow: 1px 1px 20px #444;*/
 }
 
+.InnerMAContent{
+    height:20vh;
+    width:25vw;
+    background: var(--AOJet);
+    color: var(--AOFog);
+    font: 14pt 'Special Elite', cursive;
+    box-sizing: border-box;
+    padding:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
 .MascotSwablu{
     width:250px;
     height:400px;
