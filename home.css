@@ -131,7 +131,7 @@ https://pinkhima.github.io/Alderidge/home
     height:auto;
     /*border:5px solid green;*/
     border-image: linear-gradient(90deg, rgb(207,163,213), rgb(91,135,190)) 1;
-    min-height:500px;
+    min-height:55vh;
     background-color: var(--lo-back);
     display:flex;
     justify-content: space-around;
@@ -140,16 +140,24 @@ https://pinkhima.github.io/Alderidge/home
 }
 
 .InnerMAContent{
-    height:20vh;
+    height:50vh;
     width:25vw;
-    background: var(--AOJet);
+    background: transparent;
     color: var(--AOFog);
     font: 14pt 'Special Elite', cursive;
     box-sizing: border-box;
     padding:10px;
+    border: 0px solid red;
+    position:relative;
 }
 
-
+.InnerMAContent span{
+    background: var(--lo-back2);
+    padding: 15px 5px 9px 5px;
+    text-align:center;
+    vertical-align: middle;
+    line-height:265%;
+}
 
 
 
